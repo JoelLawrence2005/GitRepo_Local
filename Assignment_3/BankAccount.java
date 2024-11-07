@@ -1,15 +1,21 @@
 import java.util.*;
 
 public class BankAccount {
-    String accountHolderName;
-    String accountNumber;
-    double balance;
+    private String accountHolderName;
+    private String accountNumber;
+    private double balance;
 
     Transaction[] transactionList = new Transaction[20];
 
     Scanner input = new Scanner(System.in);
 
     Date date = new Date();
+
+    public String getAccountNumber() {return "Account Number: " + this.accountNumber;}
+
+    public String getAccountHolderName() {return "Account Holder Name: " + this.accountHolderName;}
+
+    public String getBalance() {return "Account Balance: " + this.balance;}
 
     public BankAccount() {
         this.accountHolderName = "Unknown";
